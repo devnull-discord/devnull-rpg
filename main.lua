@@ -41,18 +41,6 @@ function love.draw(dt)
     for i=1, #bullets, 1 do
         local bullet = bullets[i]
         love.graphics.setColor(0, 0, 0)
-        if bullet.dire == "n" then
-            bullet.y = bullet.y - 5
-            love.graphics.circle("fill", bullet.x, bullet.y, 7, 100)
-        elseif bullet.dire == "s" then
-            bullet.y = bullet.y + 5
-            love.graphics.circle("fill", bullet.x, bullet.y, 7, 100)
-        elseif bullet.dire == "e" then
-            bullet.x = bullet.x + 5
-            love.graphics.circle("fill", bullet.x, bullet.y, 7, 100)
-        elseif bullet.dire == "w" then
-            bullet.x = bullet.x - 5
-            love.graphics.circle("fill", bullet.x, bullet.y, 7, 100)
-        end
+        utils.draw_bullet(bullet)
     end
 end
