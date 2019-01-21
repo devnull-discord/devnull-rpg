@@ -39,7 +39,7 @@ function love.draw(dt)
     sprite = love.graphics.circle("fill", cX, cY, 20, 100)
 
     for i=1, #bullets, 1 do
-        bullet = bullets[i]
+        local bullet = bullets[i]
         love.graphics.setColor(0, 0, 0)
         if bullet.dire == "n" then
             bullet.y = bullet.y - 5
